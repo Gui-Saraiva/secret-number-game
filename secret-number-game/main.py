@@ -18,14 +18,18 @@ while True:
 3 - Reiniciar Jogo
 4 - Sair
 ''')    
-    try:        
-        menu = int(input('Digite o número da opção escolhida: '))
-        print()
-        if menu < 1 or menu > 4:            
-            print('Digite um número entre 1 e 4.')
-            continue
-    except ValueError:        
-        print('Opção inválida.')
+    while True:
+        try:        
+            menu = int(input('Digite o número da opção escolhida: '))
+            print()
+            if menu < 1 or menu > 4:            
+                print('Digite um número entre 1 e 4.')
+                print()
+                continue
+            else:
+                break
+        except ValueError:        
+            print('Opção inválida.')
 
     # tentando adivinhar o número secreto
     if menu == 1:
